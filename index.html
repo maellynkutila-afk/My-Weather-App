@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
-    <h1>Weather App</h1>
+    <h1>Welcome 👋🏼</h1>
     <h2>Tuesday September 15 2026</h2>
     <div class="container">
       <div>
@@ -18,13 +19,19 @@
       </div>
       <div>☀️12°C</div>
       <hr />
-      <form id="weather-form">
-        <input type="text" placeholder="Enter a city" required />
-        <input type="submit" value="Search" />
+      <form class="weather-form" id="weather-form">
+        <input
+          type="text"
+          placeholder="Enter a city..."
+          required
+          class="enteredCity"
+          id="entered-city"
+        />
+        <input type="submit" value="Search" class="submitButton" />
       </form>
     </div>
     <footer>
-      Coded by
+      This project was coded by
       <a href="https://github.com/maellynkutila-afk" target="_blank">
         Maelly Barbier</a
       >, is
