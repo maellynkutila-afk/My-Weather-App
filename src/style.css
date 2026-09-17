@@ -13,16 +13,28 @@ h1 {
   font-size: 50px;
   text-align: center;
   margin-bottom: 10px;
+  font-family: Trebuchet MS;
 }
 h2 {
   font-size: 30px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  font-family: Trebuchet MS;
+  font-style: italic;
 }
 h3 {
   font-size: 70px;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+hr {
+  background-color: #0329a6;
+  height: 1px;
+  position: relative;
+  top: -30px;
+}
+footer {
+  text-align: center;
 }
 .container {
   background-color: rgb(248, 247, 247);
@@ -32,17 +44,40 @@ h3 {
   width: 500px;
   height: 300px;
   margin: 50px auto;
+  padding-left: 5px;
+}
+.currentTemperature {
+  position: relative;
+  left: 330px;
+  top: -149px;
+}
+.temperatureNumber {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: -4px;
+}
+.celsius {
+  font-size: 20px;
+  letter-spacing: -1px;
+  position: relative;
+  top: -30px;
+}
+.weatherLogo {
+  font-size: 50px;
 }
 .enteredCity {
   padding: 15px 20px;
   width: 40%;
   border: 1px solid #0329a6;
   border-radius: 6px;
+  font-size: 16px;
 }
 .submitButton {
   padding: 15px 20px;
   border: 1px solid #0329a6;
   border-radius: 6px;
+  margin-left: 5px;
+  font-size: 16px;
 }
 .weather-form {
   margin: 30px auto;
