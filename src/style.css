@@ -25,7 +25,11 @@ h2 {
 h3 {
   font-size: 70px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+p {
+  margin-left: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 hr {
   background-color: #0329a6;
@@ -39,7 +43,7 @@ footer {
 .container {
   background-color: rgb(248, 247, 247);
   border: 20px solid rgb(248, 247, 247);
-  border-radius: 20px 66px 54px 2px;
+  border-radius: 50px 50px 50px 2px;
   box-shadow: 5px 5px 5px rgb(36, 67, 206);
   width: 500px;
   height: 300px;
@@ -49,21 +53,34 @@ footer {
 .currentTemperature {
   position: relative;
   left: 330px;
-  top: -149px;
+  top: -152px;
 }
 .temperatureNumber {
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 600;
   letter-spacing: -4px;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .celsius {
   font-size: 20px;
   letter-spacing: -1px;
   position: relative;
-  top: -30px;
+  top: -35px;
+  margin-left: 3px;
 }
 .weatherLogo {
   font-size: 50px;
+  position: relative;
+  top: -5px;
+}
+.weather-form {
+  margin: 30px auto;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: -41px;
 }
 .enteredCity {
   padding: 15px 20px;
@@ -75,12 +92,9 @@ footer {
 .submitButton {
   padding: 15px 20px;
   border: 1px solid #0329a6;
+  background-color: #0329a6;
+  color: #f8f7f7;
   border-radius: 6px;
   margin-left: 5px;
   font-size: 16px;
-}
-.weather-form {
-  margin: 30px auto;
-  display: block;
-  text-align: center;
 }
