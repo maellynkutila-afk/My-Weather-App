@@ -23,7 +23,7 @@ h2 {
   font-style: italic;
 }
 h3 {
-  font-size: 70px;
+  font-size: 50px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -52,12 +52,12 @@ footer {
 }
 .currentTemperature {
   position: relative;
-  left: 330px;
-  top: -152px;
+  left: 335px;
+  top: -105px;
 }
 .temperatureNumber {
   font-size: 70px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -4px;
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -80,7 +80,7 @@ footer {
   display: block;
   text-align: center;
   position: relative;
-  top: -41px;
+  top: -32px;
 }
 .enteredCity {
   padding: 15px 20px;

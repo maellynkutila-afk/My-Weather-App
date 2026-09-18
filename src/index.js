@@ -23,11 +23,11 @@ let monthsOfYear = [
   "December",
 ];
 
-let current = new Date();
-let day = weekDays[current.getDay()];
-let month = monthsOfYear[current.getMonth()];
-let date = current.getDate();
-let year = current.getFullYear();
+let currentTime = new Date();
+let day = weekDays[currentTime.getDay()];
+let month = monthsOfYear[currentTime.getMonth()];
+let date = currentTime.getDate();
+let year = currentTime.getFullYear();
 
 let h2 = document.querySelector("h2");
 h2.innerHTML = `${day} ${month} ${date}, ${year}`;
@@ -38,11 +38,17 @@ function changeDisplay(event) {
   let cityValue = city.value;
   let h3 = document.querySelector("h3");
   h3.innerHTML = `${cityValue}`;
+
+  function liveWeather(response) {
+    let temperatureNum = document.querySelector("#temperatureNumber");
+    let roundedTemp = Math.round(response.data.temperature.current);
+    temperatureNum.innerHTML = roundedTemp;
+  }
+
+  let apiKey = "4b4301acf33210b672de34o3f362t059";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(liveWeather);
 }
 
 let weatherForm = document.querySelector("#weather-form");
 weatherForm.addEventListener("submit", changeDisplay);
-
-let apiKey = "4b4301acf33210b672de34o3f362t059";
-let apiUrl =
-  "https://api.shecodes.io/weather/v1/current?query={query}&key={key}&units=metric";
