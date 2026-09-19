@@ -53,6 +53,16 @@ function changeDisplay(event) {
     let temperatureNum = document.querySelector("#temperatureNumber");
     let roundedTemp = Math.round(response.data.temperature.current);
     temperatureNum.innerHTML = roundedTemp;
+
+    let descriptionElement = document.querySelector("#description");
+    let humidity = document.querySelector("#humidity");
+    let wind = document.querySelector("#wind");
+    let adaptedDescription = response.data.condition.description;
+    let adaptedHumidity = response.data.temperature.humidity;
+    let adaptedWind = response.data.wind.speed;
+    descriptionElement.innerHTML = adaptedDescription;
+    humidity.innerHTML = adaptedHumidity;
+    wind.innerHTML = adaptedWind;
   }
 
   let apiKey = "4b4301acf33210b672de34o3f362t059";
