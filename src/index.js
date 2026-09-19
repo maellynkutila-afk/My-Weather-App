@@ -28,9 +28,19 @@ let day = weekDays[currentTime.getDay()];
 let month = monthsOfYear[currentTime.getMonth()];
 let date = currentTime.getDate();
 let year = currentTime.getFullYear();
+let hour = currentTime.getHours();
+let minutes = currentTime.getMinutes();
+
+if (hour < 10) {
+  hour = `0${hour}`;
+}
+
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 
 let h2 = document.querySelector("h2");
-h2.innerHTML = `${day} ${month} ${date}, ${year}`;
+h2.innerHTML = `${day} ${month} ${date}, ${year} <br> ${hour}:${minutes}`;
 
 function changeDisplay(event) {
   event.preventDefault();

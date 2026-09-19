@@ -50,6 +50,11 @@ footer {
   margin: 50px auto;
   padding-left: 5px;
 }
+.wind,
+.humidity {
+  color: rgb(36, 67, 206);
+  font-weight: bold;
+}
 .currentTemperature {
   position: relative;
   left: 335px;
