@@ -57,7 +57,7 @@ footer {
 }
 .currentTemperature {
   position: relative;
-  left: 335px;
+  left: 310px;
   top: -105px;
 }
 .temperatureNumber {
@@ -67,18 +67,22 @@ footer {
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: relative;
+  left: -14px;
+  top: -14px;
 }
 .celsius {
   font-size: 20px;
   letter-spacing: -1px;
   position: relative;
-  top: -35px;
-  margin-left: 3px;
+  top: -50px;
+  left: -12px;
 }
 .weatherLogo {
-  font-size: 50px;
+  width: 88px;
+  height: 88px;
   position: relative;
-  top: -5px;
+  left: -5px;
 }
 .weather-form {
   margin: 30px auto;

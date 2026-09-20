@@ -56,6 +56,9 @@ function displayWeather(response) {
   descriptionElement.innerHTML = adaptedDescription;
   humidity.innerHTML = adaptedHumidity;
   wind.innerHTML = adaptedWind;
+
+  let emoji = document.querySelector("#emoji");
+  emoji.innerHTML = `<img src="${response.data.condition.icon_url}" class="weatherLogo"></img>`;
 }
 
 function getWeather(city) {
