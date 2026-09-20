@@ -42,33 +42,38 @@ if (minutes < 10) {
 let h2 = document.querySelector("h2");
 h2.innerHTML = `${day} ${month} ${date}, ${year} <br> ${hour}:${minutes}`;
 
+function displayWeather(response) {
+  let temperatureNum = document.querySelector("#temperatureNumber");
+  let roundedTemp = Math.round(response.data.temperature.current);
+  temperatureNum.innerHTML = roundedTemp;
+
+  let descriptionElement = document.querySelector("#description");
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+  let adaptedDescription = response.data.condition.description;
+  let adaptedHumidity = response.data.temperature.humidity;
+  let adaptedWind = response.data.wind.speed;
+  descriptionElement.innerHTML = adaptedDescription;
+  humidity.innerHTML = adaptedHumidity;
+  wind.innerHTML = adaptedWind;
+}
+
+function getWeather(city) {
+  let apiKey = "4b4301acf33210b672de34o3f362t059";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
+}
+
 function changeDisplay(event) {
   event.preventDefault();
   let city = document.querySelector("#entered-city");
   let cityValue = city.value;
   let h3 = document.querySelector("h3");
   h3.innerHTML = `${cityValue}`;
-
-  function liveWeather(response) {
-    let temperatureNum = document.querySelector("#temperatureNumber");
-    let roundedTemp = Math.round(response.data.temperature.current);
-    temperatureNum.innerHTML = roundedTemp;
-
-    let descriptionElement = document.querySelector("#description");
-    let humidity = document.querySelector("#humidity");
-    let wind = document.querySelector("#wind");
-    let adaptedDescription = response.data.condition.description;
-    let adaptedHumidity = response.data.temperature.humidity;
-    let adaptedWind = response.data.wind.speed;
-    descriptionElement.innerHTML = adaptedDescription;
-    humidity.innerHTML = adaptedHumidity;
-    wind.innerHTML = adaptedWind;
-  }
-
-  let apiKey = "4b4301acf33210b672de34o3f362t059";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(liveWeather);
+  getWeather(cityValue);
 }
 
 let weatherForm = document.querySelector("#weather-form");
 weatherForm.addEventListener("submit", changeDisplay);
+
+getWeather("Paris");
