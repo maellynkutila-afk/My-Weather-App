@@ -35,7 +35,7 @@ hr {
   background-color: #0329a6;
   height: 1px;
   position: relative;
-  top: -30px;
+  top: -50px;
 }
 footer {
   text-align: center;
@@ -46,9 +46,46 @@ footer {
   border-radius: 50px 50px 50px 2px;
   box-shadow: 5px 5px 5px rgb(36, 67, 206);
   width: 500px;
-  height: 300px;
+  height: 400px;
   margin: 50px auto;
   padding-left: 5px;
+}
+hr.firstSeparator {
+  background-color: #0329a6;
+  height: 1px;
+  position: relative;
+  top: -92px;
+}
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: -76px;
+}
+.weather-forecast-date {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.weather-forecast-icon {
+  font-size: 30px;
+  text-align: center;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: rgb(36, 67, 206);
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.weather-forecast-temperature-max {
+  font-weight: bolder;
+  padding: 0 10px;
+}
+.weather-forecast-temperature-min {
+  font-weight: lighter;
+  padding: 0 10px;
 }
 .wind,
 .humidity {
@@ -89,7 +126,7 @@ footer {
   display: block;
   text-align: center;
   position: relative;
-  top: -32px;
+  top: -56px;
 }
 .enteredCity {
   padding: 15px 20px;
