@@ -46,7 +46,7 @@ footer {
   border-radius: 50px 50px 50px 2px;
   box-shadow: 5px 5px 5px rgb(36, 67, 206);
   width: 500px;
-  height: 400px;
+  height: 430px;
   margin: 50px auto;
   padding-left: 5px;
 }
@@ -69,8 +69,10 @@ hr.firstSeparator {
   margin-bottom: 10px;
 }
 .weather-forecast-icon {
-  font-size: 30px;
-  text-align: center;
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 0 auto;
 }
 .weather-forecast-temperatures {
   text-align: center;
@@ -81,11 +83,11 @@ hr.firstSeparator {
 }
 .weather-forecast-temperature-max {
   font-weight: bolder;
-  padding: 0 10px;
+  padding: 0 7px 0 10px;
 }
 .weather-forecast-temperature-min {
   font-weight: lighter;
-  padding: 0 10px;
+  padding: 0 7px 0 0;
 }
 .wind,
 .humidity {
