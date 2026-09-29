@@ -59,6 +59,8 @@ function displayWeather(response) {
 
   let emoji = document.querySelector("#emoji");
   emoji.innerHTML = `<img src="${response.data.condition.icon_url}" class="weatherLogo"></img>`;
+
+  getForecast(response.data.city);
 }
 
 function getWeather(city) {
@@ -74,6 +76,12 @@ function changeDisplay(event) {
   let h3 = document.querySelector("h3");
   h3.innerHTML = `${cityValue}`;
   getWeather(cityValue);
+}
+
+function getForecast(city) {
+  let apiKey = "4b4301acf33210b672de34o3f362t059";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
 }
 
 function displayForecast() {
